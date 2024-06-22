@@ -1,7 +1,7 @@
 package io.github.hadenlabs.poc_opentelemetry.productservice.controller;
 
 import io.github.hadenlabs.poc_opentelemetry.productservice.domain.Product;
-import io.github.hadenlabs.poc_opentelemetry.productservice.domain.ProductRepository;
+import io.github.hadenlabs.poc_opentelemetry.productservice.repository.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

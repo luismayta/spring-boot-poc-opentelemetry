@@ -1,4 +1,4 @@
-package io.github.hadenlabs.poc_opentelemetry.productservice.domain;
+package io.github.hadenlabs.poc_opentelemetry.productservice.dto;
 
 import java.math.BigDecimal;
 

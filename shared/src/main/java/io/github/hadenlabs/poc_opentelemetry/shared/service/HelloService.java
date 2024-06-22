@@ -1,4 +1,4 @@
-package io.github.hadenlabs.poc_opentelemetry.service;
+package io.github.hadenlabs.poc_opentelemetry.shared.service;
 import org.springframework.stereotype.Service;
 
 @Service

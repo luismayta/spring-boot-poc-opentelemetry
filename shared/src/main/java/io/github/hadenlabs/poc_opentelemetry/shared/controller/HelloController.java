@@ -1,5 +1,5 @@
-package io.github.hadenlabs.poc_opentelemetry.controller;
-import io.github.hadenlabs.poc_opentelemetry.service.HelloService;
+package io.github.hadenlabs.poc_opentelemetry.shared.controller;
+import io.github.hadenlabs.poc_opentelemetry.shared.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;

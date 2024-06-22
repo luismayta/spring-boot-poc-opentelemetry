@@ -1,5 +1,6 @@
-package io.github.hadenlabs.poc_opentelemetry.productservice.domain;
+package io.github.hadenlabs.poc_opentelemetry.productservice.repository;
 
+import io.github.hadenlabs.poc_opentelemetry.productservice.domain.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
 package io.github.hadenlabs.poc_opentelemetry.promotionservice.controller;
 
 import io.github.hadenlabs.poc_opentelemetry.promotionservice.domain.Promotion;
-import io.github.hadenlabs.poc_opentelemetry.promotionservice.domain.PromotionRepository;
+import io.github.hadenlabs.poc_opentelemetry.promotionservice.repository.PromotionRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;

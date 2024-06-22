@@ -1,10 +1,10 @@
 package io.github.hadenlabs.poc_opentelemetry.productservice.controller;
 
 import io.github.hadenlabs.poc_opentelemetry.productservice.domain.Product;
-import io.github.hadenlabs.poc_opentelemetry.productservice.domain.ProductResult;
-import io.github.hadenlabs.poc_opentelemetry.productservice.domain.Promotion;
-import io.github.hadenlabs.poc_opentelemetry.productservice.domain.ProductRepository;
-import io.github.hadenlabs.poc_opentelemetry.productservice.domain.PromotionServiceClient;
+import io.github.hadenlabs.poc_opentelemetry.productservice.dto.ProductResult;
+import io.github.hadenlabs.poc_opentelemetry.productservice.dto.Promotion;
+import io.github.hadenlabs.poc_opentelemetry.productservice.repository.ProductRepository;
+import io.github.hadenlabs.poc_opentelemetry.productservice.service.PromotionServiceClient;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

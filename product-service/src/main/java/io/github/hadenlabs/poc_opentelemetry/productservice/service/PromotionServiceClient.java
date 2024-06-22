@@ -1,6 +1,7 @@
-package io.github.hadenlabs.poc_opentelemetry.productservice.domain;
+package io.github.hadenlabs.poc_opentelemetry.productservice.service;
 
 import io.github.hadenlabs.poc_opentelemetry.productservice.ApplicationProperties;
+import io.github.hadenlabs.poc_opentelemetry.productservice.dto.Promotion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.ParameterizedTypeReference;

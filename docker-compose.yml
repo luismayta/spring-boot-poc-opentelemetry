@@ -1,8 +1,12 @@
 services:
   product-service:
     image: hadenlabs/product-service
+    platform: linux/amd64
     container_name: product-service
-    build: ./product-service
+    build:
+      context: ./product-service
+      dockerfile: Dockerfile
+    restart: always
     environment:
       - SPRING_PROFILES_ACTIVE=docker
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
@@ -16,8 +20,12 @@ services:
 
   promotion-service:
     image: hadenlabs/promotion-service
+    platform: linux/amd64
     container_name: promotion-service
-    build: ./promotion-service
+    build:
+      context: ./promotion-service
+      dockerfile: Dockerfile
+    restart: always
     environment:
       - SPRING_PROFILES_ACTIVE=docker
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
@@ -45,3 +53,4 @@ services:
     ports:
       - "16686:16686"
       - "14250:14250"
+      - "4317:4317"

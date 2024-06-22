@@ -35,11 +35,8 @@ RUN apt-get update -y \
     && apt-get purge -y \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV JAVA_OPTS="-javaagent:${JAVA_HOME}/bin/opentelemetry-javaagent.jar"
-
+# ENV JAVA_OPTS="-javaagent:${JAVA_HOME}/bin/opentelemetry-javaagent.jar"
 
 COPY build/libs/product-service.jar product-service.jar
 
-EXPOSE 8090
-
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom", "${JAVA_OPTS}", "-jar","product-service.jar"]
+CMD ["java","-Djava.security.egd=file:/dev/./urandom", "-jar", "product-service.jar"]

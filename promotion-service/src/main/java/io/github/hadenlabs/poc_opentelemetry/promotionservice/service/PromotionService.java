@@ -17,7 +17,7 @@ public class PromotionService {
     public List<PromotionDTO> getAllPromotions() {
         List<PromotionDTO> promotions = new ArrayList<>();
         promotions.add(new PromotionDTO(1L, 1L, new BigDecimal("10000")));
-        promotions.add(new PromotionDTO(2L, 1L, new BigDecimal("10000")));
+        promotions.add(new PromotionDTO(2L, 2L, new BigDecimal("10000")));
         return promotions.stream()
             .map(promotion -> new PromotionDTO(promotion.id(), promotion.productId(), promotion.discount()))
             .collect(Collectors.toList());

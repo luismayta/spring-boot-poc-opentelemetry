@@ -1,18 +1,18 @@
 <!-- Space: Projects -->
-<!-- Parent: BaseTemplate -->
-<!-- Title: Contributing BaseTemplate -->
-<!-- Label: BaseTemplate -->
+<!-- Parent: SpringBootPocOpenTelemetry -->
+<!-- Title: Contributing SpringBootPocOpenTelemetry -->
+<!-- Label: SpringBootPocOpenTelemetry -->
 <!-- Label: Contributing -->
 <!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
 
 # How To Contribute
 
-Contributions to base-template are welcome.
+Contributions to spring-boot-poc-opentelemetry are welcome.
 
 Feel free to use all of the contribution options:
 
-- Contribute to base-template repositories on [GitHub](https://github.com/hadenlabs/base-template). See [Git flow](./contribute/github-flow.md).
+- Contribute to spring-boot-poc-opentelemetry repositories on [GitHub](https://github.com/luismayta/spring-boot-poc-opentelemetry). See [Git flow](./contribute/github-flow.md).
 
 ## Getting Started
 
@@ -73,7 +73,7 @@ See [Git flow](./contribute/github-flow.md).
 
 ### Documentation
 
-Documentation is a part of the base-template code base. You can find the documentation files in the `doc/` subdirectory of the [main repository](https://github.com/hadenlabs/base-template). This means that the contribution process is the same for both the source code and documentation.
+Documentation is a part of the spring-boot-poc-opentelemetry code base. You can find the documentation files in the `doc/` subdirectory of the [main repository](https://github.com/luismayta/spring-boot-poc-opentelemetry). This means that the contribution process is the same for both the source code and documentation.
 
 ### Testing
 
@@ -81,15 +81,15 @@ See [Testing](./testing.md).
 
 ### Code Submission
 
-1.  See if a [Pull Request](https://github.com/hadenlabs/base-template/pulls) exists
+1.  See if a [Pull Request](https://github.com/luismayta/spring-boot-poc-opentelemetry/pulls) exists
     - Add some comments or review the code to help it along
     - Don\'t be afraid to comment when logic needs clarification
-2.  Create a Fork and open a [Pull Request](https://github.com/hadenlabs/base-template/pulls) if needed
+2.  Create a Fork and open a [Pull Request](https://github.com/luismayta/spring-boot-poc-opentelemetry/pulls) if needed
 
 ### Code Review
 
 - Anyone can review code
-- Any [Pull Request](https://github.com/hadenlabs/base-template/pulls) should be closed or merged within a week
+- Any [Pull Request](https://github.com/luismayta/spring-boot-poc-opentelemetry/pulls) should be closed or merged within a week
 
 ### Code Acceptance
 

@@ -1,7 +1,7 @@
 <!-- Space: Projects -->
-<!-- Parent: BaseTemplate -->
-<!-- Title: Commands BaseTemplate -->
-<!-- Label: BaseTemplate -->
+<!-- Parent: SpringBootPocOpenTelemetry -->
+<!-- Title: Commands SpringBootPocOpenTelemetry -->
+<!-- Label: SpringBootPocOpenTelemetry -->
 <!-- Label: Project -->
 <!-- Label: Commands -->
 <!-- Include: disclaimer.md -->

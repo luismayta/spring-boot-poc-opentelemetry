@@ -1,6 +1,6 @@
 <!-- Space: Projects -->
-<!-- Parent: BaseTemplate -->
-<!-- Title: Roadmap BaseTemplate -->
+<!-- Parent: SpringBootPocOpenTelemetry -->
+<!-- Title: Roadmap SpringBootPocOpenTelemetry -->
 <!-- Label: Roadmap -->
 <!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
@@ -29,7 +29,7 @@
 
 The Roadmap is a list of all the things we're working on for the year.
 
-You can see the corresponding projects on [base-template](https://github.com/hadenlabs/base-template)
+You can see the corresponding projects on [spring-boot-poc-opentelemetry](https://github.com/luismayta/spring-boot-poc-opentelemetry)
 
 ## Legend
 
@@ -53,5 +53,3 @@ You can see the corresponding projects on [base-template](https://github.com/had
 ## Long Lived Initiatives
 
 These projects don't have an end date. They are something we'll continuously work towards.
-
-- [Better Docs](https://hadenlabs.atlassian.net/wiki)

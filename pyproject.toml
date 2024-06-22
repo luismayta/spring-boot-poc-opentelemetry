@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "base-template"
+name = "spring-boot-poc-opentelemetry"
 version = "0.0.0"
-description = "base template"
+description = "spring boot poc opentelemetry"
 authors = ["Luis Mayta <luis@hadenlabs.com>"]
 license = "LGPL-3.0"
 readme = "README.md"
-repository = "https://github.com/hadenlabs/base-template"
+repository = "https://github.com/luismayta/spring-boot-poc-opentelemetry"
 
 [tool.poetry.dependencies]
 python = "^3.8,<3.12"

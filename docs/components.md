@@ -1,7 +1,7 @@
 <!-- Space: Projects -->
-<!-- Parent: BaseTemplate -->
-<!-- Title: Components BaseTemplate -->
-<!-- Label: BaseTemplate -->
+<!-- Parent: SpringBootPocOpenTelemetry -->
+<!-- Title: Components SpringBootPocOpenTelemetry -->
+<!-- Label: SpringBootPocOpenTelemetry -->
 <!-- Label: Project -->
 <!-- Label: Components -->
 <!-- Include: disclaimer.md -->

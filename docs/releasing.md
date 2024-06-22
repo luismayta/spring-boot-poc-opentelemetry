@@ -1,7 +1,7 @@
 <!-- Space: Projects -->
-<!-- Parent: BaseTemplate -->
-<!-- Title: Releasing BaseTemplate -->
-<!-- Label: BaseTemplate -->
+<!-- Parent: SpringBootPocOpenTelemetry -->
+<!-- Title: Releasing SpringBootPocOpenTelemetry -->
+<!-- Label: SpringBootPocOpenTelemetry -->
 <!-- Label: Project -->
 <!-- Label: Releasing -->
 <!-- Include: disclaimer.md -->
@@ -11,7 +11,7 @@
 
 ## Bump a new version
 
-Make a new version of base-template in the following steps:
+Make a new version of spring-boot-poc-opentelemetry in the following steps:
 
 ### Generate version major
 

@@ -1,1 +1,1 @@
-# Welcome to base-template documentation
+# Welcome to spring-boot-poc-opentelemetry documentation

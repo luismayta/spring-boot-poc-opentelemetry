@@ -129,7 +129,12 @@ tasks:
       - task: python:precommit
       - task: git:setup
       - task: coursier:setup
-      - gradle clean build
+      - ./gradlew clean build
+
+  build:
+    desc: build gradle
+    cmds:
+      - ./gradlew clean build
 
   start:
     desc: Start spring boot

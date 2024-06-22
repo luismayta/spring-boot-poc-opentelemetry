@@ -37,9 +37,9 @@ dependencies {
   //  observability
   // Micrometer Tracing Bridge for OpenTelemetry
   implementation("io.micrometer:micrometer-tracing-bridge-otel")
-  implementation("io.opentelemetry:opentelemetry-sdk:1.5.0")
-  implementation("io.opentelemetry:opentelemetry-exporter-jaeger:1.5.0")
-  implementation("io.opentelemetry:opentelemetry-exporter-logging:1.5.0")
+  implementation("io.opentelemetry:opentelemetry-sdk:1.39.0")
+  implementation("io.opentelemetry:opentelemetry-exporter-logging:1.39.0")
+  implementation("io.opentelemetry:opentelemetry-exporter-jaeger:1.34.1")
 
   // Spring Boot DevTools
   runtimeOnly("org.springframework.boot:spring-boot-devtools")
@@ -52,9 +52,6 @@ dependencies {
 
   // Testcontainers PostgreSQL
   testImplementation("org.testcontainers:postgresql")
-
-  //  liquibase
-  implementation("org.liquibase:liquibase-core")
 
   runtimeOnly("org.postgresql:postgresql")
 

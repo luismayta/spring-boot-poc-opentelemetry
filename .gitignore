@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/python,node,go,zsh,sonar,java,maven,intellij+all,terraform,linux
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,node,go,zsh,sonar,java,maven,intellij+all,terraform,linux
+# Created by https://www.toptal.com/developers/gitignore/api/python,node,go,zsh,sonar,terraform,linux,java,intellij+all,gradle,maven
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,node,go,zsh,sonar,terraform,linux,java,intellij+all,gradle,maven
 
 ### Go ###
 # If you prefer the allow list template instead of the deny list, see community template:
@@ -553,7 +553,32 @@ zsdoc/data
 /tests/_output/*
 !/tests/_output/.gitkeep
 
-# End of https://www.toptal.com/developers/gitignore/api/python,node,go,zsh,sonar,java,maven,intellij+all,terraform,linux
+### Gradle ###
+.gradle
+**/build/
+!src/**/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+
+# Cache of project
+.gradletasknamecache
+
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+# JDT-specific (Eclipse Java Development Tools)
+
+### Gradle Patch ###
+# Java heap dump
+*.hprof
+
+# End of https://www.toptal.com/developers/gitignore/api/python,node,go,zsh,sonar,terraform,linux,java,intellij+all,gradle,maven
 # custom git ignore files
 bin
 .scannerwork
@@ -565,6 +590,8 @@ TMP_CHANGELOG.md
 *.lock.hcl
 *.lock
 *.zip
+*.iml
 .external_modules
-vendor
+.pmd
+application-local.yml
 

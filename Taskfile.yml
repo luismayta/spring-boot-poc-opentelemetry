@@ -5,6 +5,7 @@ includes:
   changelog: ./provision/task/changelog.yml
   confluence: ./provision/task/confluence.yml
   python: ./provision/task/python.yml
+  yarn: ./provision/task/yarn.yml
   git: ./provision/task/git.yml
   docs: ./provision/task/docs.yml
   docker: ./provision/task/docker.yml
@@ -12,7 +13,10 @@ includes:
   plantuml: ./provision/task/plantuml.yml
   prettier: ./provision/task/prettier.yml
   sonar: ./provision/task/sonar.yml
+  coursier: ./provision/task/coursier.yml
+  go: ./provision/task/go.yml
   diagrams: ./provision/diagrams/Taskfile.yml
+  terraform: ./provision/task/terraform.yml
 
 env:
   DOCKER:
@@ -39,8 +43,9 @@ vars:
   REVIEWERS: luismayta
   PYTHON_VERSION: 3.11.5
   NODE_VERSION: 18.18.2
-  TERRAFORM_VERSION: 1.8.4
-  GIT_IGNORES: python,node,go,zsh,sonar,java,maven,intellij+all,terraform,linux
+  JAVA_VERSION: 21.0.0
+  TERRAFORM_VERSION: 1.8.5
+  GIT_IGNORES: python,node,go,zsh,sonar,terraform,linux,java,intellij+all,gradle,maven
   GOLANGCI_VERSION: 1.42.0
   README_FILE: README.md
   GIT_IGNORES_CUSTOM: |
@@ -54,8 +59,10 @@ vars:
     *.lock.hcl
     *.lock
     *.zip
+    *.iml
     .external_modules
-    vendor
+    .pmd
+    application-local.yml
 
 tasks:
   default:
@@ -85,6 +92,9 @@ tasks:
       - changelog:check
       - git:check
       - docs:check
+      - yarn:check
+      - go:check
+      - coursier:check
 
   readme:
     run: once
@@ -118,12 +128,13 @@ tasks:
       - task: python:setup
       - task: python:precommit
       - task: git:setup
+      - task: coursier:setup
+      - gradle clean build
 
-  test:
-    run: once
-    desc: Execute task test all
+  start:
+    desc: Start spring boot
     cmds:
-      - task: go:test
+      - gradle bootRun -Dspring.profiles.active=local
 
   environment:
     desc: Setup environment of project

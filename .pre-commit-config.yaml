@@ -11,6 +11,7 @@ exclude: >
     .+\.terraform.*$|
     .+\.venv.*$|
     .+\.lock$|
+    .+\.mdx$|
   )$
 
 repos:
@@ -96,3 +97,22 @@ repos:
       - id: hadolint
         args:
           - --config=.ci/linters/.hadolint.yaml
+  - repo: https://github.com/dustinsand/pre-commit-jvm
+    rev: "v0.6.0"
+    hooks:
+      - id: pmd
+        args:
+          [
+            -rulesets,
+            .ci/linters/pmd-ruleset.xml,
+            --minimum-priority,
+            "2",
+            -language,
+            java,
+            -cache,
+            .pmd/cache,
+            --dir,
+            src/main/java,
+            -f,
+            textcolor
+          ]

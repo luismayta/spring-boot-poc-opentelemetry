@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ruleset name="Standard PMD Ruleset" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+<description>
+  This ruleset includes standard PMD rules for general code quality.
+</description>
+
+<!-- Basic ruleset: general coding standards -->
+<rule ref="rulesets/java/basic.xml"/>
+
+<!-- Best practices ruleset: best practices for coding -->
+<rule ref="rulesets/java/bestpractices.xml"/>
+
+<!-- Code size ruleset: checks for code length and complexity -->
+<rule ref="rulesets/java/codesize.xml"/>
+
+<!-- Design ruleset: design principles and patterns -->
+<rule ref="rulesets/java/design.xml"/>
+
+<!-- Documentation ruleset: checks for proper documentation -->
+<rule ref="rulesets/java/documentation.xml"/>
+
+<!-- Error Prone ruleset: likely bugs and error-prone constructs -->
+<rule ref="rulesets/java/errorprone.xml"/>
+
+<!-- Multithreading ruleset: checks for issues in multithreaded code -->
+<rule ref="rulesets/java/multithreading.xml"/>
+
+<!-- Performance ruleset: performance improvements and optimizations -->
+<rule ref="rulesets/java/performance.xml"/>
+
+<!-- Security ruleset: checks for potential security issues -->
+<rule ref="rulesets/java/security.xml"/>
+
+<!-- Unused code ruleset: checks for unused code elements -->
+<rule ref="rulesets/java/unusedcode.xml"/>
+
+</ruleset>

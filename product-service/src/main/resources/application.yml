@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: product-service
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+    tags:
+      application: "${spring.application.name}"
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
+
+app:
+  promotion-service-url: http://localhost:8082
+  jaeger:
+    endpoint: http://localhost:14250

@@ -1,0 +1,48 @@
+version: "3.9"
+services:
+  product-service:
+    image: hadenlabs/product-service
+    container_name: product-service
+    build: ./product-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - APP_PROMOTION_SERVICE_URL=http://promotion-service:8082
+      - APP_JAEGER_ENDPOINT=http://jaeger:14250
+    ports:
+      - "8081:8081"
+
+  promotion-service:
+    image: hadenlabs/promotion-service
+    container_name: promotion-service
+    build: ./promotion-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - APP_JAEGER_ENDPOINT=http://jaeger:14250
+    ports:
+      - "8082:8082"
+
+  db:
+    image: postgres:15.2-alpine
+    container_name: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "15432:5432"
+    restart: unless-stopped
+
+  jaeger:
+    container_name: jaeger
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - "16686:16686"
+      - "14250:14250"

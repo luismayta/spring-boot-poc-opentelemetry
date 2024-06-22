@@ -38,8 +38,8 @@ RUN apt-get update -y \
 ENV JAVA_OPTS="-javaagent:${JAVA_HOME}/bin/opentelemetry-javaagent.jar"
 
 
-COPY build/libs/${ARTIFACT_NAME} ${ARTIFACT_NAME}
+COPY build/libs/product-service.jar product-service.jar
 
 EXPOSE 8090
 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom", "${JAVA_OPTS}", "-jar","poc-opentelemetry.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom", "${JAVA_OPTS}", "-jar","product-service.jar"]

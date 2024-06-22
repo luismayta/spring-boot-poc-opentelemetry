@@ -1,5 +1,6 @@
 import org.gradle.kotlin.dsl.*
 import org.springframework.boot.gradle.tasks.run.BootRun
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
   id("org.springframework.boot") version "3.3.1"
@@ -10,14 +11,6 @@ plugins {
 group = "io.github.hadenlabs"
 version = "0.0.0"
 description = "poc-opentelemetry"
-
-/*tasks.withType<org.springframework.boot.gradle.tasks.bundling.BootJar> {
-  mainClass.set("io.github.hadenlabs.poc_opentelemetry.productservice.ProductServiceApplication")
-}*/
-
-/*springBoot {
-  mainClass = "io.github.hadenlabs.poc_opentelemetry.productservice.ProductServiceApplication"
-}*/
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter")
@@ -66,4 +59,9 @@ dependencies {
   runtimeOnly("org.postgresql:postgresql")
 
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+tasks.named<BootJar>("bootJar") {
+  enabled = true
+  archiveFileName.set("product-service.jar")
 }

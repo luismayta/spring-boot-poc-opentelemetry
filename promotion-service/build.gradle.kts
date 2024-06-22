@@ -1,23 +1,16 @@
 import org.gradle.kotlin.dsl.*
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 import org.springframework.boot.gradle.tasks.run.BootRun
 
 plugins {
   id("java-library")
-	id("org.springframework.boot") version "3.3.1"
+  id("org.springframework.boot") version "3.3.1"
   id("io.spring.dependency-management") version "1.1.3"
 }
 
 group = "io.github.hadenlabs"
 version = "0.0.0"
 description = "poc-opentelemetry"
-
-/*springBoot {
-  mainClass = "io.github.hadenlabs.poc_opentelemetry.promotionservice.PromotionServiceApplication"
-}*/
-
-tasks.withType<org.springframework.boot.gradle.tasks.bundling.BootJar> {
-  mainClass.set("io.github.hadenlabs.poc_opentelemetry.promotionservice.PromotionServiceApplication")
-}
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter")
@@ -66,4 +59,9 @@ dependencies {
   runtimeOnly("org.postgresql:postgresql")
 
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+tasks.named<BootJar>("bootJar") {
+  enabled = true
+  archiveFileName.set("promotion-service.jar")
 }

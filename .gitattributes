@@ -150,3 +150,5 @@ bin/* text eol=lf
 *.pem       binary
 *.pub       binary
 *.crt       binary
+gradlew     binary
+gradlew.bat binary

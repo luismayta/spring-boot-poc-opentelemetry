@@ -1,0 +1,67 @@
+spring:
+  application:
+    name: poc-opentelemetry
+  config:
+    import: optional:configserver:http://config-server:8888
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    config:
+      enabled: true
+      import-check:
+        enabled: true
+
+  liquibase:
+    change-log: classpath:db/liquibase-changelog.xml
+    url: jdbc:postgresql://10.0.0.91:5432/poc-opentelemetry
+    user: user
+    password: pass
+    enabled: true
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://10.0.0.91:5432/poc-opentelemetry
+    username: user
+    password: pass
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    database: postgresql
+    open-in-view: false
+    generate-ddl: false
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://auth-test.infosis.tech/.well-known/jwks.json
+
+server:
+  forward-headers-strategy: FRAMEWORK
+  port: 8090
+  compression:
+    enabled: true
+    min-response-size: 2048
+    mime-types:
+      - text/html
+      - text/css
+      - application/javascript
+      - application/json
+
+app:
+  version: "${version}"
+  name: "${name}"
+  description: "${description}"
+
+frame:
+  exception-handler: default
+  security:
+    permitted: /payment/receive/**"
+
+management.endpoints.web.exposure.include: "*"
+
+logging:
+  level:
+    com.infosisglobal.pocopentelemetry: DEBUG

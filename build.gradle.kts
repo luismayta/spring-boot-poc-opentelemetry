@@ -1,5 +1,4 @@
 import org.gradle.kotlin.dsl.*
-import org.gradle.api.tasks.JavaExec
 import org.springframework.boot.gradle.tasks.run.BootRun
 
 plugins {
@@ -24,6 +23,7 @@ repositories {
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter")
+  implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("org.liquibase:liquibase-core")
   runtimeOnly("org.postgresql:postgresql")
 
@@ -67,6 +67,7 @@ gradle.taskGraph.whenReady {
     }
   }
 }
+
 tasks.getByName<BootRun>("bootRun") {
   doFirst {
     systemProperty("spring.profiles.active", determineActiveProfile())

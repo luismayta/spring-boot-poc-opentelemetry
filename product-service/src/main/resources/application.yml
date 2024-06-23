@@ -22,6 +22,7 @@ management:
             requests: true
     tags:
       application: "${spring.application.name}"
+
   tracing:
     enabled: true
     sampling:

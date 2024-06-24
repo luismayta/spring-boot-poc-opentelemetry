@@ -6,14 +6,23 @@ spring:
     hibernate:
       ddl-auto: update
 
+  data:
+    jpa:
+      repositories:
+        enabled: true
+
 server:
   port: 8082
+  tomcat:
+    fail-on-load-failure: false
 
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: health,prometheus
+      base-path: /actuator/products
+
   metrics:
     distribution:
       percentiles-histogram:
@@ -22,10 +31,22 @@ management:
             requests: true
     tags:
       application: "${spring.application.name}"
+
   tracing:
     enabled: true
     sampling:
       probability: 1.0
+
+logging:
+  level:
+    root: info
+    org:
+      springframework:
+        cloud:
+          gateway: trace
+          gateway.route.RouteDefinitionRouteLocator: info
+  pattern:
+    level: "%5p [${spring.application.name}, %X{traceId:-}, %X{spanId:-}]"
 
 app:
   jaeger:

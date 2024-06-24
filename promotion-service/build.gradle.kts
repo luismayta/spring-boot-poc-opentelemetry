@@ -1,11 +1,10 @@
 import org.gradle.kotlin.dsl.*
 import org.springframework.boot.gradle.tasks.bundling.BootJar
-import org.springframework.boot.gradle.tasks.run.BootRun
 
 plugins {
-  id("java-library")
   id("org.springframework.boot") version "3.3.1"
   id("io.spring.dependency-management") version "1.1.3"
+  id("java-library")
 }
 
 group = "io.github.hadenlabs"
@@ -34,10 +33,13 @@ dependencies {
   // PostgreSQL
   implementation("org.postgresql:postgresql")
 
-  //  observability
+  // observability
   // Micrometer Tracing Bridge for OpenTelemetry
   implementation("io.micrometer:micrometer-tracing-bridge-otel")
+//  implementation("io.micrometer:micrometer-registry-prometheus")
   implementation("io.opentelemetry:opentelemetry-sdk:1.39.0")
+
+  // exporter
   implementation("io.opentelemetry:opentelemetry-exporter-logging:1.39.0")
   implementation("io.opentelemetry:opentelemetry-exporter-jaeger:1.34.1")
 

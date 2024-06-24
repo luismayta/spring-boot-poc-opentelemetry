@@ -1,5 +1,4 @@
 import org.gradle.kotlin.dsl.*
-import org.springframework.boot.gradle.tasks.run.BootRun
 
 plugins {
   id("java-library")

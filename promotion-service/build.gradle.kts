@@ -3,7 +3,7 @@ import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
   id("org.springframework.boot") version "3.3.1"
-  id("io.spring.dependency-management") version "1.1.3"
+  id("io.spring.dependency-management") version "1.1.6"
   id("java-library")
 }
 

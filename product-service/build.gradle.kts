@@ -37,10 +37,10 @@ dependencies {
   // Micrometer Tracing Bridge for OpenTelemetry
   implementation("io.micrometer:micrometer-tracing-bridge-otel")
 //  implementation("io.micrometer:micrometer-registry-prometheus")
-  implementation("io.opentelemetry:opentelemetry-sdk:1.40.0")
+  implementation("io.opentelemetry:opentelemetry-sdk:1.42.0")
 
   // exporter
-  implementation("io.opentelemetry:opentelemetry-exporter-logging:1.40.0")
+  implementation("io.opentelemetry:opentelemetry-exporter-logging:1.42.0")
   implementation("io.opentelemetry:opentelemetry-exporter-jaeger:1.34.1")
 
   // Spring Boot DevTools

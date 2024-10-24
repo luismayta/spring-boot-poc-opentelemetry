@@ -3,7 +3,7 @@ import org.springframework.boot.gradle.tasks.run.BootRun
 
 plugins {
   id("java-library")
-  id("org.springframework.boot") version "3.3.4"
+  id("org.springframework.boot") version "3.3.5"
   id("io.spring.dependency-management") version "1.1.6"
   id("co.uzzu.dotenv.gradle") version "4.0.0"
 }
